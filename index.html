@@ -19,7 +19,7 @@
   --border:   rgba(255,255,255,0.08);
   --cream:    #EAF4FC;
   --dark-txt: #0A1929;
-  --nav-h:    68px;
+  --nav-h:    calc(68px + env(safe-area-inset-bottom, 0px));
 }
 
 html, body {
@@ -142,10 +142,11 @@ html, body {
 
 /* Bottom Nav */
 .bottom-nav {
-  height: var(--nav-h); background: #fff;
+  background: #fff;
   border-top: 1px solid rgba(0,0,0,.08);
   display: flex; align-items: stretch; flex-shrink: 0;
   box-shadow: 0 -4px 16px rgba(0,0,0,.06);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 .nav-btn {
   flex: 1; display: flex; flex-direction: column;
@@ -996,7 +997,7 @@ html, body {
         <div class="super-card">
           <strong id="lbl-super">🛒 Supermercato</strong><br>
           <span id="txt-super"><strong>Auchan Supermarché</strong> — Juan-les-Pins, Boulevard Poincaré. A pochi passi dalla casa, comodissimo per la spesa quotidiana. ⭐ 4.2</span><br><br>
-          <a href="https://www.google.com/maps/search/Auchan+Supermarché+Juan-les-Pins+Boulevard+Poincaré" target="_blank" class="maps-btn">🧭 Vai qui</a>
+          <a href="https://www.google.com/maps/search/Auchan+Supermarché+Juan-les-Pins+Boulevard+Poincaré" target="_blank" class="maps-btn">🧭 Vai qui</a><br>
         </div>
         <div class="spacer-bottom"></div>
       </div>
@@ -1216,7 +1217,7 @@ const T = {
     'rt2':'Haute cuisine · Méditerranéenne · €€€€','rd2':'Ristorante raffinato all\'interno dell\'Hôtel Belles Rives, l\'ex villa di F. Scott Fitzgerald. Cucina d\'autore. ⭐ 4.8',
     'rt3':'Provenzale · Terrasse · €€','rd3':'Cucina provenzale autentica. Bouillabaisse e piatti di pesce locale imperdibili. Molto amato dai locali. ⭐ 4.3',
     'rt4':'Bar · Colazione · Aperitivo · €','rd4':'Il bar perfetto per la colazione con croissant e café au lait. Ottimo anche per l\'aperitivo serale. ⭐ 4.6',
-    'lbl-super':'🛒 Supermercato','txt-super':'<strong>Auchan Supermarché</strong> — Juan-les-Pins, Boulevard Poincaré. A pochi passi dalla casa, comodissimo per la spesa quotidiana. ⭐ 4.2<br><br><a href="https://www.google.com/maps/search/Auchan+Supermarché+Juan-les-Pins+Boulevard+Poincaré" target="_blank" class="maps-btn">🧭 Vai qui</a>',
+    'lbl-super':'🛒 Supermercato','txt-super':'<strong>Auchan Supermarché</strong> — Juan-les-Pins, Boulevard Poincaré. A pochi passi dalla casa, comodissimo per la spesa quotidiana. ⭐ 4.2',
     'ph-mov-eye':'Numeri Utili & Check-out','ph-mov-title':'Info Utili',
     'mv1t':'Quadro Elettrico','mv1d':'[POSIZIONE QUADRO ELETTRICO]',
     'mv2t':'Valvola Acqua','mv2d':'[POSIZIONE VALVOLA ACQUA]',
@@ -1301,7 +1302,7 @@ const T = {
     'rt2':'Haute cuisine · Mediterranean · €€€€','rd2':'Refined restaurant inside the Hôtel Belles Rives, F. Scott Fitzgerald\'s former villa. Exceptional cuisine. ⭐ 4.8',
     'rt3':'Provençal · Terrace · €€','rd3':'Authentic Provençal cuisine. The bouillabaisse and local fish dishes are unmissable. Much loved by locals. ⭐ 4.3',
     'rt4':'Bar · Breakfast · Aperitif · €','rd4':'The perfect bar for breakfast with croissant and café au lait. Great for evening aperitifs too. ⭐ 4.6',
-    'lbl-super':'🛒 Supermarket','txt-super':'<strong>Auchan Supermarché</strong> — Juan-les-Pins, Boulevard Poincaré. Just steps from the house, perfect for daily shopping. ⭐ 4.2<br><br><a href="https://www.google.com/maps/search/Auchan+Supermarché+Juan-les-Pins+Boulevard+Poincaré" target="_blank" class="maps-btn">🧭 Find it</a>',
+    'lbl-super':'🛒 Supermarket','txt-super':'<strong>Auchan Supermarché</strong> — Juan-les-Pins, Boulevard Poincaré. Just steps from the house, perfect for daily shopping. ⭐ 4.2',
     'ph-mov-eye':'Useful numbers & Check-out','ph-mov-title':'Useful Info',
     'mv1t':'Electrical Panel','mv1d':'[LOCATION OF ELECTRICAL PANEL]',
     'mv2t':'Water Valve','mv2d':'[LOCATION OF WATER VALVE]',
